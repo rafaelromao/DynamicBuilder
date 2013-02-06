@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Windows Desktop
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicBuilder", "DynamicBuilder\DynamicBuilder.csproj", "{58138198-180B-4410-9102-B4EF9DD3C163}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicBuilder.Specification", "DynamicBuilder.Specification\DynamicBuilder.Specification.csproj", "{1B249B2F-3151-4CA4-BACF-A3A9ED354633}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58138198-180B-4410-9102-B4EF9DD3C163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58138198-180B-4410-9102-B4EF9DD3C163}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58138198-180B-4410-9102-B4EF9DD3C163}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58138198-180B-4410-9102-B4EF9DD3C163}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B249B2F-3151-4CA4-BACF-A3A9ED354633}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B249B2F-3151-4CA4-BACF-A3A9ED354633}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B249B2F-3151-4CA4-BACF-A3A9ED354633}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B249B2F-3151-4CA4-BACF-A3A9ED354633}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
