@@ -1,17 +1,21 @@
 ﻿Feature: Build an object
-	In order to verify that the DynamicBuilder can build an object
+	In order to verify that the DynamicBuilder can build objects
 	As a developer
-	I want to be build a System.Object
+	I want to receive, from an instance of DynamicBuilder, a new instance of a given type
 
 @building
 Scenario: Build an object
-	Given I have a DynamicBuilder instance
-	When I invoke DynamicBuilder.A<System.Object>()
-	Then I will receive a new instance System.Object
+	Given I have an instance of the DynamicBuilder named builder
+	When I request the builder to build an instance of type <Type>
+	Then I will receive from the builder an instance of type <Type>
+		| Type          |
+		| System.Object |
 
 @building
 Scenario: Build two objects
-	Given I have a DynamicBuilder instance
-	When I invoke DynamicBuilder.A<System.Object>()
-	And I invoke DynamicBuilder.A<System.Object>()
-	Then I will receive two different instance of System.Object
+	Given I have an instance of the DynamicBuilder named builder
+	When I request the builder to build an instance of type <Type>
+	And I request the builder to build an instance of type <Type>
+	Then I will receive from the builder two different instances of type <Type>
+		| Type          |
+		| System.Object |
