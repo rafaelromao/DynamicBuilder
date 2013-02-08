@@ -1,97 +1,59 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\DynamicBuilder.Specification.csproj" total="2" errors="0" failures="0" not-run="0" inconclusive="2" ignored="0" skipped="0" invalid="0" date="2013-02-06" time="22:44:02">
+<test-results name="C:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\DynamicBuilder.Specification.csproj" total="2" errors="2" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2013-02-07" time="22:45:53">
   <environment nunit-version="2.6.2.12296" clr-version="2.0.50727.6387" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification" machine-name="WIN8RMR" user="Rafael" user-domain="WIN8RMR" />
   <culture-info current-culture="pt-BR" current-uiculture="pt-BR" />
-  <test-suite type="Project" name="C:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\DynamicBuilder.Specification.csproj" executed="True" result="Inconclusive" success="False" time="1.109" asserts="0">
+  <test-suite type="Project" name="C:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\DynamicBuilder.Specification.csproj" executed="True" result="Failure" success="False" time="1.157" asserts="0">
     <results>
-      <test-suite type="Assembly" name="C:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\bin\Debug\DynamicBuilder.Specification.dll" executed="True" result="Inconclusive" success="False" time="1.087" asserts="0">
+      <test-suite type="Assembly" name="C:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\bin\Debug\DynamicBuilder.Specification.dll" executed="True" result="Failure" success="False" time="1.136" asserts="0">
         <results>
-          <test-suite type="Namespace" name="DynamicBuilder" executed="True" result="Inconclusive" success="False" time="1.087" asserts="0">
+          <test-suite type="Namespace" name="DynamicBuilder" executed="True" result="Failure" success="False" time="1.135" asserts="0">
             <results>
-              <test-suite type="Namespace" name="Specification" executed="True" result="Inconclusive" success="False" time="1.086" asserts="0">
+              <test-suite type="Namespace" name="Specification" executed="True" result="Failure" success="False" time="1.135" asserts="0">
                 <results>
-                  <test-suite type="Namespace" name="Features" executed="True" result="Inconclusive" success="False" time="1.086" asserts="0">
+                  <test-suite type="Namespace" name="Features" executed="True" result="Failure" success="False" time="1.134" asserts="0">
                     <results>
-                      <test-suite type="TestFixture" name="BuildAnObjectFeature" description="Build an object" executed="True" result="Inconclusive" success="False" time="1.084" asserts="0">
+                      <test-suite type="TestFixture" name="BuildAnObjectFeature" description="Build an object" executed="True" result="Failure" success="False" time="1.132" asserts="0">
                         <results>
-                          <test-suite type="ParameterizedTest" name="BuildAnObject" description="Build an object" executed="True" result="Inconclusive" success="False" time="0.562" asserts="0">
+                          <test-suite type="ParameterizedTest" name="BuildAnObject" description="Build an object" executed="True" result="Failure" success="False" time="0.429" asserts="0">
                             <categories>
                               <category name="building" />
                             </categories>
                             <results>
-                              <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectFeature.BuildAnObject(&quot;System.Object&quot;,null)" executed="True" result="Inconclusive" success="False" time="0.551" asserts="0">
-                                <reason>
-                                  <message><![CDATA[No matching step definition found for one or more steps.
-using System;
-using TechTalk.SpecFlow;
-
-namespace MyNamespace
-{
-    [Binding]
-    public class StepDefinitions
-    {
-        [Given(@"I have an instance of the DynamicBuilder named builder")]
-        public void GivenIHaveAnInstanceOfTheDynamicBuilderNamedBuilder()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [When(@"I request the builder to build an instance of type System\.Object")]
-        public void WhenIRequestTheBuilderToBuildAnInstanceOfTypeSystem_Object()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Then(@"I will receive from the builder an instance of type System\.Object")]
-        public void ThenIWillReceiveFromTheBuilderAnInstanceOfTypeSystem_Object()
-        {
-            ScenarioContext.Current.Pending();
-        }
-    }
-}
-]]></message>
-                                </reason>
+                              <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectFeature.BuildAnObject(&quot;System.Object&quot;,null)" executed="True" result="Error" success="False" time="0.418" asserts="0">
+                                <failure>
+                                  <message><![CDATA[System.NotImplementedException : O método ou a operação não está implementada.]]></message>
+                                  <stack-trace><![CDATA[em DynamicBuilder.Builder.An[T]() na c:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder\Builder.cs:linha 13
+em DynamicBuilder.Specification.Steps.BuildAnObjectStepDefinition.WhenIRequestTheBuilderToBuildAnInstanceOfTypeSystem_Object() na c:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\Steps\BuildAnObjectStepDefinition.cs:linha 26
+em TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+em TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+em TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+em TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+em DynamicBuilder.Specification.Features.BuildAnObjectFeature.ScenarioCleanup() na c:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\Features\BuildAnObject.feature.cs:linha 0
+em DynamicBuilder.Specification.Features.BuildAnObjectFeature.BuildAnObject(String type, String[] exampleTags) na c:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\Features\BuildAnObject.feature:linha 10
+]]></stack-trace>
+                                </failure>
                               </test-case>
                             </results>
                           </test-suite>
-                          <test-suite type="ParameterizedTest" name="BuildTwoObjects" description="Build two objects" executed="True" result="Inconclusive" success="False" time="0.010" asserts="0">
+                          <test-suite type="ParameterizedTest" name="BuildTwoObjects" description="Build two objects" executed="True" result="Failure" success="False" time="0.004" asserts="0">
                             <categories>
                               <category name="building" />
                             </categories>
                             <results>
-                              <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectFeature.BuildTwoObjects(&quot;System.Object&quot;,null)" executed="True" result="Inconclusive" success="False" time="0.010" asserts="0">
-                                <reason>
-                                  <message><![CDATA[No matching step definition found for one or more steps.
-using System;
-using TechTalk.SpecFlow;
-
-namespace MyNamespace
-{
-    [Binding]
-    public class StepDefinitions
-    {
-        [Given(@"I have an instance of the DynamicBuilder named builder")]
-        public void GivenIHaveAnInstanceOfTheDynamicBuilderNamedBuilder()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [When(@"I request the builder to build an instance of type System\.Object")]
-        public void WhenIRequestTheBuilderToBuildAnInstanceOfTypeSystem_Object()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Then(@"I will receive from the builder two different instances of type System\.Object")]
-        public void ThenIWillReceiveFromTheBuilderTwoDifferentInstancesOfTypeSystem_Object()
-        {
-            ScenarioContext.Current.Pending();
-        }
-    }
-}
-]]></message>
-                                </reason>
+                              <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectFeature.BuildTwoObjects(&quot;System.Object&quot;,null)" executed="True" result="Error" success="False" time="0.003" asserts="0">
+                                <failure>
+                                  <message><![CDATA[System.NotImplementedException : O método ou a operação não está implementada.]]></message>
+                                  <stack-trace><![CDATA[em DynamicBuilder.Builder.An[T]() na c:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder\Builder.cs:linha 13
+em DynamicBuilder.Specification.Steps.BuildAnObjectStepDefinition.WhenIRequestTheBuilderToBuildAnInstanceOfTypeSystem_Object() na c:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\Steps\BuildAnObjectStepDefinition.cs:linha 26
+em TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
+em TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
+em TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
+em TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
+em DynamicBuilder.Specification.Features.BuildAnObjectFeature.ScenarioCleanup() na c:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\Features\BuildAnObject.feature.cs:linha 0
+em DynamicBuilder.Specification.Features.BuildAnObjectFeature.BuildTwoObjects(String type, String[] exampleTags) na c:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\Features\BuildAnObject.feature:linha 21
+]]></stack-trace>
+                                </failure>
                               </test-case>
                             </results>
                           </test-suite>

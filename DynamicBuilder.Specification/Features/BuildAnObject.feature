@@ -17,7 +17,7 @@ Scenario Outline: Build an object
 Scenario Outline: Build two objects
 	Given I have an instance of the DynamicBuilder named builder
 	When I request the builder to build an instance of type <Type>
-	And I request the builder to build an instance of type <Type>
+	And I request the builder to build another instance of type <Type>
 	Then I will receive from the builder two different instances of type <Type>
 
 	Examples:

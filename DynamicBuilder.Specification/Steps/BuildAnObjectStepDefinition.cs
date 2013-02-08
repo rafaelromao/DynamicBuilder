@@ -3,41 +3,47 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using TechTalk.SpecFlow;
+using FluentAssertions;
 
 namespace DynamicBuilder.Specification.Steps
 {
     [Binding]
     public class BuildAnObjectStepDefinition
     {
-        [Given("I have entered (.*) into the calculator")]
-        public void GivenIHaveEnteredSomethingIntoTheCalculator(int number)
-        {
-            //TODO: implement arrange (recondition) logic
-            // For storing and retrieving scenario-specific data, 
-            // the instance fields of the class or the
-            //     ScenarioContext.Current
-            // collection can be used.
-            // To use the multiline text or the table argument of the scenario,
-            // additional string/Table parameters can be defined on the step definition
-            // method. 
+        private IBuilder Build = null;
+        private Object AnObject = null;
+        private Object AnotherObject = null;
 
-            ScenarioContext.Current.Pending();
+        [Given(@"I have an instance of the DynamicBuilder named builder")]
+        public void GivenIHaveAnInstanceOfTheDynamicBuilderNamedBuilder()
+        {
+            Build = new Builder();
         }
 
-        [When("I press add")]
-        public void WhenIPressAdd()
+        [When(@"I request the builder to build an instance of type System\.Object")]
+        public void WhenIRequestTheBuilderToBuildAnInstanceOfTypeSystem_Object()
         {
-            //TODO: implement act (action) logic
-
-            ScenarioContext.Current.Pending();
+            AnObject = Build.An<Object>();
         }
 
-        [Then("the result should be (.*) on the screen")]
-        public void ThenTheResultShouldBe(int result)
+        [When(@"I request the builder to build another instance of type System\.Object")]
+        public void WhenIRequestTheBuilderToBuildAnotherInstanceOfTypeSystem_Object()
         {
-            //TODO: implement assert (verification) logic
+            AnotherObject = Build.An<Object>();
+        }
 
-            ScenarioContext.Current.Pending();
+        [Then(@"I will receive from the builder an instance of type System\.Object")]
+        public void ThenIWillReceiveFromTheBuilderAnInstanceOfTypeSystem_Object()
+        {
+            AnObject.Should().NotBeNull();
+        }
+
+        [Then(@"I will receive from the builder two different instances of type System\.Object")]
+        public void ThenIWillReceiveFromTheBuilderTwoDifferentInstancesOfTypeSystem_Object()
+        {
+            AnObject.Should().NotBeNull();
+            AnotherObject.Should().NotBeNull();
+            AnObject.Should().NotBeSameAs(AnotherObject);
         }
     }
 }
