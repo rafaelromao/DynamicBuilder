@@ -32,9 +32,9 @@ namespace DynamicBuilder.Specification.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Build an object", "In order to verify that the DynamicBuilder can build objects\nAs a developer\nI wan" +
-                    "t to receive, from an instance of DynamicBuilder, a new instance of a given type" +
-                    "", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Build an object", "In order to verify that the DynamicBuilder can build objects\r\nAs a developer\r\nI w" +
+                    "ant to receive, from an instance of DynamicBuilder, a new instance of a given ty" +
+                    "pe", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -111,7 +111,7 @@ this.ScenarioSetup(scenarioInfo);
 #line 19
  testRunner.When(string.Format("I request the builder to build an instance of type {0}", type), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 20
- testRunner.And(string.Format("I request the builder to build an instance of type {0}", type), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And(string.Format("I request the builder to build another instance of type {0}", type), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 21
  testRunner.Then(string.Format("I will receive from the builder two different instances of type {0}", type), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

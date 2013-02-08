@@ -50,13 +50,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Report.cs" />
+    <Compile Include="Data\Person.cs" />
     <Compile Include="Features\BuildAnObject.feature.cs" />
+    <Compile Include="Features\BuildAnObjectWithSomething.feature.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Steps\BuildAnObjectStepDefinition.cs" />
+    <Compile Include="Steps\BuildAnObjectWithSomethingStepDefinition.cs" />
+    <Compile Include="Steps\BuildAnObjectBaseStepDefinition.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Features\BuildAnObject.feature" />
+    <None Include="Features\BuildAnObjectWithSomething.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

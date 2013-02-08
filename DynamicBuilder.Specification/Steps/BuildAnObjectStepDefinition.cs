@@ -8,17 +8,10 @@ using FluentAssertions;
 namespace DynamicBuilder.Specification.Steps
 {
     [Binding]
-    public class BuildAnObjectStepDefinition
+    public class BuildAnObjectStepDefinition : BuildAnObjectBaseStepDefinition
     {
-        private IBuilder Build = null;
         private Object AnObject = null;
         private Object AnotherObject = null;
-
-        [Given(@"I have an instance of the DynamicBuilder named builder")]
-        public void GivenIHaveAnInstanceOfTheDynamicBuilderNamedBuilder()
-        {
-            Build = new Builder();
-        }
 
         [When(@"I request the builder to build an instance of type System\.Object")]
         public void WhenIRequestTheBuilderToBuildAnInstanceOfTypeSystem_Object()
