@@ -12,5 +12,9 @@ namespace DynamicBuilder
         {
             return new T();
         }
+        public T A<T>() where T : new()
+        {
+            return An<T>();
+        }
     }
 }

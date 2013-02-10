@@ -69,7 +69,8 @@ namespace DynamicBuilder.Specification.Features
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Build an object")]
         [NUnit.Framework.CategoryAttribute("building")]
-        [NUnit.Framework.TestCaseAttribute("System.Object", null)]
+        [NUnit.Framework.TestCaseAttribute("AnObject", null)]
+        [NUnit.Framework.TestCaseAttribute("AThing", null)]
         public virtual void BuildAnObject(string type, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -94,7 +95,8 @@ this.ScenarioSetup(scenarioInfo);
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Build two objects")]
         [NUnit.Framework.CategoryAttribute("building")]
-        [NUnit.Framework.TestCaseAttribute("System.Object", null)]
+        [NUnit.Framework.TestCaseAttribute("AnObject", null)]
+        [NUnit.Framework.TestCaseAttribute("AThing", null)]
         public virtual void BuildTwoObjects(string type, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -104,15 +106,15 @@ this.ScenarioSetup(scenarioInfo);
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Build two objects", @__tags);
-#line 17
-this.ScenarioSetup(scenarioInfo);
 #line 18
- testRunner.Given("I have an instance of the DynamicBuilder named builder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 19
- testRunner.When(string.Format("I request the builder to build an instance of type {0}", type), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Given("I have an instance of the DynamicBuilder named builder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 20
- testRunner.And(string.Format("I request the builder to build another instance of type {0}", type), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.When(string.Format("I request the builder to build an instance of type {0}", type), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 21
+ testRunner.And(string.Format("I request the builder to build another instance of type {0}", type), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 22
  testRunner.Then(string.Format("I will receive from the builder two different instances of type {0}", type), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

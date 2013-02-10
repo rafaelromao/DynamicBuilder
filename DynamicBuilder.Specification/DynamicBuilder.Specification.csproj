@@ -50,6 +50,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\AnObject.cs" />
+    <Compile Include="Data\AThing.cs" />
     <Compile Include="Data\Report.cs" />
     <Compile Include="Data\Person.cs" />
     <Compile Include="Features\BuildAnObject.feature.cs" />

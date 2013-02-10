@@ -11,7 +11,8 @@ Scenario Outline: Build an object
 
 	Examples:
 		| Type          |
-		| System.Object |
+		| AnObject |
+		| AThing |
 
 @building
 Scenario Outline: Build two objects
@@ -22,4 +23,5 @@ Scenario Outline: Build two objects
 
 	Examples:
 		| Type          |
-		| System.Object |
+		| AnObject |
+		| AThing |

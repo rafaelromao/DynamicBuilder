@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DynamicBuilder
+namespace DynamicBuilder.Specification.Data
 {
-    public interface IBuilder
+    class AnObject
     {
-        T An<T>() where T : new();
-        T A<T>() where T : new();
     }
 }
