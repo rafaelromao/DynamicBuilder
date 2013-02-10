@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DynamicBuilder.Specification.Data
+namespace DynamicBuilder.Specification.Model
 {
     class Person
     {

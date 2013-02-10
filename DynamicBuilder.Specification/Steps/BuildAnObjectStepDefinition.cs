@@ -7,15 +7,24 @@ using FluentAssertions;
 
 namespace DynamicBuilder.Specification.Steps
 {
-    using DynamicBuilder.Specification.Data;
+    using DynamicBuilder.Specification.Model;
 
     [Binding]
-    public class BuildAnObjectStepDefinition : BuildAnObjectBaseStepDefinition
+    public class BuildAnObjectStepDefinition
     {
         private AnObject AnObject = null;
         private AThing AThing = null;
         private AnObject AnotherObject = null;
         private AThing AnotherThing = null;
+
+        protected IBuilder Build = null;
+
+        [Given(@"I have an instance of the DynamicBuilder named builder")]
+        [Scope(Feature = "Build an object")]
+        public void GivenIHaveAnInstanceOfTheDynamicBuilderNamedBuilder()
+        {
+            Build = new Builder();
+        }
 
         [When(@"I request the builder to build an instance of type AnObject")]
         public void WhenIRequestTheBuilderToBuildAnInstanceOfTypeAnObject()
@@ -64,9 +73,9 @@ namespace DynamicBuilder.Specification.Steps
         [Then(@"I will receive from the builder two different instances of type AThing")]
         public void ThenIWillReceiveFromTheBuilderTwoDifferentInstancesOfTypeAThing()
         {
-            AnObject.Should().NotBeNull();
-            AnotherObject.Should().NotBeNull();
-            AnObject.Should().NotBeSameAs(AnotherObject);
+            AThing.Should().NotBeNull();
+            AnotherThing.Should().NotBeNull();
+            AThing.Should().NotBeSameAs(AnotherThing);
         }
     }
 }

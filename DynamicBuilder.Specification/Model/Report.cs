@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DynamicBuilder.Specification.Data
+namespace DynamicBuilder.Specification.Model
 {
-    class AnObject
+    class Report
     {
+        public string Title;
+        public DateTime Date;
     }
 }
