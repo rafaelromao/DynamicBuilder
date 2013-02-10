@@ -12,70 +12,72 @@ namespace DynamicBuilder.Specification.Steps
     [Binding]
     public class BuildAnObjectStepDefinition
     {
-        private AnObject AnObject = null;
-        private AThing AThing = null;
-        private AnObject AnotherObject = null;
-        private AThing AnotherThing = null;
+        private IBuilder<AnObject> AnObject = null;
+        private IBuilder<AThing> AThing = null;
+        private IBuilder<AnObject> AnotherObject = null;
+        private IBuilder<AThing> AnotherThing = null;
 
         protected IBuilder Build = null;
 
-        [Given(@"I have an instance of the DynamicBuilder named builder")]
+        [Given(@"I have an instance of the DynamicBuilder")]
         [Scope(Feature = "Build an object")]
-        public void GivenIHaveAnInstanceOfTheDynamicBuilderNamedBuilder()
+        public void GivenIHaveAnInstanceOfTheDynamicBuilder()
         {
             Build = new Builder();
         }
 
-        [When(@"I request the builder to build an instance of type AnObject")]
-        public void WhenIRequestTheBuilderToBuildAnInstanceOfTypeAnObject()
+        [When(@"I request the DynamicBuilder to give me a builder for an instance of type AnObject")]
+        public void WhenIRequestTheDynamicBuilderToGiveMeABuilderForAnInstanceOfTypeAnObject()
         {
             AnObject = Build.An<AnObject>();
         }
 
-        [When(@"I request the builder to build an instance of type AThing")]
-        public void WhenIRequestTheBuilderToBuildAnInstanceOfTypeAThing()
+        [When(@"I request the DynamicBuilder to give me a builder for an instance of type AThing")]
+        public void WhenIRequestTheDynamicBuilderToGiveMeABuilderForAnInstanceOfTypeAThing()
         {
             AThing = Build.An<AThing>();
         }
 
-        [When(@"I request the builder to build another instance of type AnObject")]
-        public void WhenIRequestTheBuilderToBuildAnotherInstanceOfTypeAnObject()
+        [When(@"I request the DynamicBuilder to give me a builder for another instance of type AnObject")]
+        public void WhenIRequestTheDynamicBuilderToGiveMeABuilderForAnotherInstanceOfTypeAnObject()
         {
             AnotherObject = Build.An<AnObject>();
         }
 
-        [When(@"I request the builder to build another instance of type AThing")]
-        public void WhenIRequestTheBuilderToBuildAnotherInstanceOfTypeAThing()
+        [When(@"I request the DynamicBuilder to give me a builder for another instance of type AThing")]
+        public void WhenIRequestTheDynamicBuilderToGiveMeABuilderForAnotherInstanceOfTypeAThing()
         {
             AnotherThing = Build.An<AThing>();
         }
 
-        [Then(@"I will receive from the builder an instance of type AnObject")]
-        public void ThenIWillReceiveFromTheBuilderAnInstanceOfTypeAnObject()
+        [Then(@"I will receive a builder for an instance of type AnObject")]
+        public void ThenIWillReceiveABuilderForAnInstanceOfTypeAnObject()
         {
             AnObject.Should().NotBeNull();
+            AnObject.Should().BeAssignableTo<IBuilder<AnObject>>();
         }
 
-        [Then(@"I will receive from the builder an instance of type AThing")]
-        public void ThenIWillReceiveFromTheBuilderAnInstanceOfTypeAThing()
+        [Then(@"I will receive a builder for an instance of type AThing")]
+        public void ThenIWillReceiveABuilderForAnInstanceOfTypeAThing()
         {
             AThing.Should().NotBeNull();
+            AThing.Should().BeAssignableTo<IBuilder<AThing>>();
         }
 
-        [Then(@"I will receive from the builder two different instances of type AnObject")]
-        public void ThenIWillReceiveFromTheBuilderTwoDifferentInstancesOfTypeAnObject()
+        [Then(@"I will receive two different builders for two different instances of type AnObject")]
+        public void ThenIWillReceiveTwoDifferentBuildersForTwoDifferentInstancesOfTypeAnObject()
         {
-            AnObject.Should().NotBeNull();
-            AnotherObject.Should().NotBeNull();
+            ThenIWillReceiveABuilderForAnInstanceOfTypeAnObject();
             AnObject.Should().NotBeSameAs(AnotherObject);
+            AnObject.Value.Should().NotBeSameAs(AnotherObject.Value);
         }
 
-        [Then(@"I will receive from the builder two different instances of type AThing")]
-        public void ThenIWillReceiveFromTheBuilderTwoDifferentInstancesOfTypeAThing()
+        [Then(@"I will receive two different builders for two different instances of type AThing")]
+        public void ThenIWillReceiveTwoDifferentBuildersForTwoDifferentInstancesOfTypeAThing()
         {
-            AThing.Should().NotBeNull();
-            AnotherThing.Should().NotBeNull();
+            ThenIWillReceiveABuilderForAnInstanceOfTypeAThing();
             AThing.Should().NotBeSameAs(AnotherThing);
+            AThing.Value.Should().NotBeSameAs(AnotherThing.Value);
         }
     }
 }

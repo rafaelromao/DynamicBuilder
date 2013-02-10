@@ -8,13 +8,18 @@ namespace DynamicBuilder
 {
     public class Builder : IBuilder
     {
-        public T An<T>() where T : new()
+        public dynamic An<T>() where T : new()
         {
-            return new T();
+            return new Builder<T>();
         }
-        public T A<T>() where T : new()
+        public dynamic A<T>() where T : new()
         {
             return An<T>();
         }
+    }
+
+    public class Builder<T> : Builder, IBuilder<T>
+    {
+        public T Value { get; private set; }
     }
 }
