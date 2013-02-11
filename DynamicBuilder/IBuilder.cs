@@ -12,7 +12,7 @@ namespace DynamicBuilder
         dynamic A<T>() where T : new();
     }
 
-    public interface IBuilder<T> : IBuilder
+    public interface IBuilder<T> : IBuilder where T : new()
     {
         T Value { get; }
     }

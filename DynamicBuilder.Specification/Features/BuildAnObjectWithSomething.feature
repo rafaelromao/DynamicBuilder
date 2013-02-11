@@ -5,9 +5,9 @@
 
 @building
 Scenario Outline: Build an object with something
-	Given I have an instance of the DynamicBuilder named builder
-	When I request the builder to build an instance of type <Type> with <Something>
-	Then I will receive from the builder an instance of type <Type> with <Something>
+	Given I have an instance of the DynamicBuilder
+	When I request the DynamicBuilder to give me a builder for an instance of type <Type> with <Something>
+	Then I will receive two different builders for two different instances of type <Type> with <Something>
 
 	Examples:
 		| Type	 | Something |

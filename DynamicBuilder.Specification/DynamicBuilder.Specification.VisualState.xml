@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1000]C:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\DynamicBuilder.Specification.nunit</TopNode>
+  <SelectedNode>[0-1013]DynamicBuilder.Specification.Features.BuildAnObjectWithSomethingFeature.BuildAnObjectWithSomething("Report","Title",null)</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1000]C:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\DynamicBuilder.Specification.nunit" Expanded="true" />
+    <Node UniqueName="[0-1014]C:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\bin\Debug\DynamicBuilder.Specification.dll" Expanded="true" />
+    <Node UniqueName="[0-1015]DynamicBuilder" Expanded="true" />
+    <Node UniqueName="[0-1016]DynamicBuilder.Specification" Expanded="true" />
+    <Node UniqueName="[0-1017]DynamicBuilder.Specification.Features" Expanded="true" />
+    <Node UniqueName="[0-1001]DynamicBuilder.Specification.Features.BuildAnObjectFeature" Expanded="true" />
+    <Node UniqueName="[0-1002]DynamicBuilder.Specification.Features.BuildAnObjectFeature.BuildAnObject" Expanded="true" />
+    <Node UniqueName="[0-1005]DynamicBuilder.Specification.Features.BuildAnObjectFeature.BuildTwoObjects" Expanded="true" />
+    <Node UniqueName="[0-1008]DynamicBuilder.Specification.Features.BuildAnObjectWithSomethingFeature" Expanded="true" />
+    <Node UniqueName="[0-1009]DynamicBuilder.Specification.Features.BuildAnObjectWithSomethingFeature.BuildAnObjectWithSomething" Expanded="true" />
+  </Nodes>
+</VisualState>

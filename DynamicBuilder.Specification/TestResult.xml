@@ -1,209 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\DynamicBuilder.Specification.csproj" total="8" errors="0" failures="2" not-run="0" inconclusive="4" ignored="0" skipped="0" invalid="0" date="2013-02-10" time="20:42:48">
-  <environment nunit-version="2.6.2.12296" clr-version="2.0.50727.6387" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification" machine-name="WIN8RMR" user="Rafael" user-domain="WIN8RMR" />
+<test-results name="C:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\DynamicBuilder.Specification.nunit" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2013-02-10" time="23:56:56">
+  <environment nunit-version="2.6.2.12296" clr-version="2.0.50727.6400" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\packages\NUnit.2.6.2" machine-name="WIN8RMR" user="Rafael" user-domain="WIN8RMR" />
   <culture-info current-culture="pt-BR" current-uiculture="pt-BR" />
-  <test-suite type="Project" name="C:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\DynamicBuilder.Specification.csproj" executed="True" result="Failure" success="False" time="2.328" asserts="0">
+  <test-suite type="Project" name="C:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\DynamicBuilder.Specification.nunit" executed="True" result="Success" success="True" time="2.094" asserts="0">
     <results>
-      <test-suite type="Assembly" name="C:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\bin\Debug\DynamicBuilder.Specification.dll" executed="True" result="Failure" success="False" time="2.312" asserts="0">
+      <test-suite type="Assembly" name="C:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\bin\Debug\DynamicBuilder.Specification.dll" executed="True" result="Success" success="True" time="2.063" asserts="0">
         <results>
-          <test-suite type="Namespace" name="DynamicBuilder" executed="True" result="Failure" success="False" time="2.312" asserts="0">
+          <test-suite type="Namespace" name="DynamicBuilder" executed="True" result="Success" success="True" time="2.063" asserts="0">
             <results>
-              <test-suite type="Namespace" name="Specification" executed="True" result="Failure" success="False" time="2.312" asserts="0">
+              <test-suite type="Namespace" name="Specification" executed="True" result="Success" success="True" time="2.063" asserts="0">
                 <results>
-                  <test-suite type="Namespace" name="Features" executed="True" result="Failure" success="False" time="2.312" asserts="0">
+                  <test-suite type="Namespace" name="Features" executed="True" result="Success" success="True" time="2.063" asserts="0">
                     <results>
-                      <test-suite type="TestFixture" name="BuildAnObjectFeature" description="Build an object" executed="True" result="Failure" success="False" time="2.094" asserts="0">
+                      <test-suite type="TestFixture" name="BuildAnObjectWithSomethingFeature" description="Build an object with something" executed="True" result="Success" success="True" time="2.063" asserts="0">
                         <results>
-                          <test-suite type="ParameterizedTest" name="BuildAnObject" description="Build an object" executed="True" result="Success" success="True" time="1.266" asserts="0">
+                          <test-suite type="ParameterizedTest" name="BuildAnObjectWithSomething" description="Build an object with something" executed="True" result="Success" success="True" time="1.516" asserts="0">
                             <categories>
                               <category name="building" />
                             </categories>
                             <results>
-                              <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectFeature.BuildAnObject(&quot;AThing&quot;,null)" executed="True" result="Success" success="True" time="1.234" asserts="0" />
-                              <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectFeature.BuildAnObject(&quot;AnObject&quot;,null)" executed="True" result="Success" success="True" time="0.012" asserts="0" />
-                            </results>
-                          </test-suite>
-                          <test-suite type="ParameterizedTest" name="BuildTwoObjects" description="Build two objects" executed="True" result="Failure" success="False" time="0.359" asserts="0">
-                            <categories>
-                              <category name="building" />
-                            </categories>
-                            <results>
-                              <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectFeature.BuildTwoObjects(&quot;AnObject&quot;,null)" executed="True" result="Failure" success="False" time="0.109" asserts="0">
-                                <failure>
-                                  <message><![CDATA[Did not expect reference to object <null>.]]></message>
-                                  <stack-trace><![CDATA[em FluentAssertions.Execution.LateBoundTestFramework.Throw(String message) na c:\Workspaces\codeplex\fluentassertions\Main\FluentAssertions.Net35\Execution\LateBoundTestFramework.cs:linha 20
-em FluentAssertions.Execution.Verification.FailWith(String failureMessage, Object[] failureArgs) na c:\Workspaces\codeplex\fluentassertions\Main\FluentAssertions.Net35\Execution\Verification.cs:linha 160
-em FluentAssertions.Primitives.ObjectAssertions.NotBeSameAs(Object unexpected, String reason, Object[] reasonArgs) na c:\Workspaces\codeplex\fluentassertions\Main\FluentAssertions.Net35\Primitives\ObjectAssertions.cs:linha 105
-em DynamicBuilder.Specification.Steps.BuildAnObjectStepDefinition.ThenIWillReceiveTwoDifferentBuildersForTwoDifferentInstancesOfTypeAnObject() na c:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\Steps\BuildAnObjectStepDefinition.cs:linha 72
-em TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
-em TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
-em TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
-em TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
-em DynamicBuilder.Specification.Features.BuildAnObjectFeature.ScenarioCleanup() na c:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\Features\BuildAnObject.feature.cs:linha 0
-em DynamicBuilder.Specification.Features.BuildAnObjectFeature.BuildTwoObjects(String type, String[] exampleTags) na c:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\Features\BuildAnObject.feature:linha 22
-]]></stack-trace>
-                                </failure>
-                              </test-case>
-                              <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectFeature.BuildTwoObjects(&quot;AThing&quot;,null)" executed="True" result="Failure" success="False" time="0.015" asserts="0">
-                                <failure>
-                                  <message><![CDATA[Did not expect reference to object <null>.]]></message>
-                                  <stack-trace><![CDATA[em FluentAssertions.Execution.LateBoundTestFramework.Throw(String message) na c:\Workspaces\codeplex\fluentassertions\Main\FluentAssertions.Net35\Execution\LateBoundTestFramework.cs:linha 20
-em FluentAssertions.Execution.Verification.FailWith(String failureMessage, Object[] failureArgs) na c:\Workspaces\codeplex\fluentassertions\Main\FluentAssertions.Net35\Execution\Verification.cs:linha 160
-em FluentAssertions.Primitives.ObjectAssertions.NotBeSameAs(Object unexpected, String reason, Object[] reasonArgs) na c:\Workspaces\codeplex\fluentassertions\Main\FluentAssertions.Net35\Primitives\ObjectAssertions.cs:linha 105
-em DynamicBuilder.Specification.Steps.BuildAnObjectStepDefinition.ThenIWillReceiveTwoDifferentBuildersForTwoDifferentInstancesOfTypeAThing() na c:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\Steps\BuildAnObjectStepDefinition.cs:linha 80
-em TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
-em TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
-em TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
-em TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
-em DynamicBuilder.Specification.Features.BuildAnObjectFeature.ScenarioCleanup() na c:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\Features\BuildAnObject.feature.cs:linha 0
-em DynamicBuilder.Specification.Features.BuildAnObjectFeature.BuildTwoObjects(String type, String[] exampleTags) na c:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\Features\BuildAnObject.feature:linha 22
-]]></stack-trace>
-                                </failure>
-                              </test-case>
-                            </results>
-                          </test-suite>
-                        </results>
-                      </test-suite>
-                      <test-suite type="TestFixture" name="BuildAnObjectWithSomethingFeature" description="Build an object with something" executed="True" result="Inconclusive" success="False" time="0.219" asserts="0">
-                        <results>
-                          <test-suite type="ParameterizedTest" name="BuildAnObjectWithSomething" description="Build an object with something" executed="True" result="Inconclusive" success="False" time="0.203" asserts="0">
-                            <categories>
-                              <category name="building" />
-                            </categories>
-                            <results>
-                              <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectWithSomethingFeature.BuildAnObjectWithSomething(&quot;Person&quot;,&quot;LastName&quot;,null)" executed="True" result="Inconclusive" success="False" time="0.188" asserts="0">
-                                <reason>
-                                  <message><![CDATA[No matching step definition found for one or more steps.
-using System;
-using TechTalk.SpecFlow;
-
-namespace MyNamespace
-{
-    [Binding]
-    public class StepDefinitions
-    {
-        [Given(@"I have an instance of the DynamicBuilder named builder")]
-        public void GivenIHaveAnInstanceOfTheDynamicBuilderNamedBuilder()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [When(@"I request the builder to build an instance of type Person with LastName")]
-        public void WhenIRequestTheBuilderToBuildAnInstanceOfTypePersonWithLastName()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Then(@"I will receive from the builder an instance of type Person with LastName")]
-        public void ThenIWillReceiveFromTheBuilderAnInstanceOfTypePersonWithLastName()
-        {
-            ScenarioContext.Current.Pending();
-        }
-    }
-}
-]]></message>
-                                </reason>
-                              </test-case>
-                              <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectWithSomethingFeature.BuildAnObjectWithSomething(&quot;Report&quot;,&quot;Title&quot;,null)" executed="True" result="Inconclusive" success="False" time="0.000" asserts="0">
-                                <reason>
-                                  <message><![CDATA[No matching step definition found for one or more steps.
-using System;
-using TechTalk.SpecFlow;
-
-namespace MyNamespace
-{
-    [Binding]
-    public class StepDefinitions
-    {
-        [Given(@"I have an instance of the DynamicBuilder named builder")]
-        public void GivenIHaveAnInstanceOfTheDynamicBuilderNamedBuilder()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [When(@"I request the builder to build an instance of type Report with Title")]
-        public void WhenIRequestTheBuilderToBuildAnInstanceOfTypeReportWithTitle()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Then(@"I will receive from the builder an instance of type Report with Title")]
-        public void ThenIWillReceiveFromTheBuilderAnInstanceOfTypeReportWithTitle()
-        {
-            ScenarioContext.Current.Pending();
-        }
-    }
-}
-]]></message>
-                                </reason>
-                              </test-case>
-                              <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectWithSomethingFeature.BuildAnObjectWithSomething(&quot;Report&quot;,&quot;Date&quot;,null)" executed="True" result="Inconclusive" success="False" time="0.016" asserts="0">
-                                <reason>
-                                  <message><![CDATA[No matching step definition found for one or more steps.
-using System;
-using TechTalk.SpecFlow;
-
-namespace MyNamespace
-{
-    [Binding]
-    public class StepDefinitions
-    {
-        [Given(@"I have an instance of the DynamicBuilder named builder")]
-        public void GivenIHaveAnInstanceOfTheDynamicBuilderNamedBuilder()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [When(@"I request the builder to build an instance of type Report with Date")]
-        public void WhenIRequestTheBuilderToBuildAnInstanceOfTypeReportWithDate()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Then(@"I will receive from the builder an instance of type Report with Date")]
-        public void ThenIWillReceiveFromTheBuilderAnInstanceOfTypeReportWithDate()
-        {
-            ScenarioContext.Current.Pending();
-        }
-    }
-}
-]]></message>
-                                </reason>
-                              </test-case>
-                              <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectWithSomethingFeature.BuildAnObjectWithSomething(&quot;Person&quot;,&quot;FirstName&quot;,null)" executed="True" result="Inconclusive" success="False" time="0.000" asserts="0">
-                                <reason>
-                                  <message><![CDATA[No matching step definition found for one or more steps.
-using System;
-using TechTalk.SpecFlow;
-
-namespace MyNamespace
-{
-    [Binding]
-    public class StepDefinitions
-    {
-        [Given(@"I have an instance of the DynamicBuilder named builder")]
-        public void GivenIHaveAnInstanceOfTheDynamicBuilderNamedBuilder()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [When(@"I request the builder to build an instance of type Person with FirstName")]
-        public void WhenIRequestTheBuilderToBuildAnInstanceOfTypePersonWithFirstName()
-        {
-            ScenarioContext.Current.Pending();
-        }
-        
-        [Then(@"I will receive from the builder an instance of type Person with FirstName")]
-        public void ThenIWillReceiveFromTheBuilderAnInstanceOfTypePersonWithFirstName()
-        {
-            ScenarioContext.Current.Pending();
-        }
-    }
-}
-]]></message>
-                                </reason>
-                              </test-case>
+                              <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectWithSomethingFeature.BuildAnObjectWithSomething(&quot;Report&quot;,&quot;Title&quot;,null)" executed="True" result="Success" success="True" time="1.516" asserts="0" />
                             </results>
                           </test-suite>
                         </results>
