@@ -11,9 +11,15 @@ namespace DynamicBuilder.Specification.Steps
     [Binding]
     public class BuildAnObjectWithSomethingStepDefinition
     {
-        private IBuilder<Person> APerson = null;
-        private IBuilder<Report> AReport = null;
-        private const string AReportTitle = "A Report Title";
+        private IBuilder<Person> APersonWithFirstName = null;
+        private IBuilder<Person> APersonWithLastName = null;
+        private IBuilder<Report> AReportWithTitle = null;
+        private IBuilder<Report> AReportWithDate = null;
+
+        private readonly string AReportTitle = "Montly Report";
+        private readonly DateTime AReportDate = new DateTime(2012, 10, 28);
+        private readonly string APersonFirstName = "José";
+        private readonly string APersonLastName = "da Silva";
 
         protected IBuilder Build = null;
 
@@ -27,51 +33,57 @@ namespace DynamicBuilder.Specification.Steps
         [When(@"I request the DynamicBuilder to give me a builder for an instance of type Report with Title")]
         public void WhenIRequestTheDynamicBuilderToGiveMeABuilderForAnInstanceOfTypeReportWithTitle()
         {
-            AReport = Build.A<Report>().WithTitle(AReportTitle);
+            AReportWithTitle = Build.A<Report>().WithTitle(AReportTitle);
         }
 
         [When(@"I request the DynamicBuilder to give me a builder for an instance of type Person with FirstName")]
         public void WhenIRequestTheDynamicBuilderToGiveMeABuilderForAnInstanceOfTypePersonWithFirstName()
         {
-            ScenarioContext.Current.Pending();
+            APersonWithFirstName = Build.A<Person>().WithFirstName(APersonFirstName);
         }
 
         [When(@"I request the DynamicBuilder to give me a builder for an instance of type Report with Date")]
         public void WhenIRequestTheDynamicBuilderToGiveMeABuilderForAnInstanceOfTypeReportWithDate()
         {
-            ScenarioContext.Current.Pending();
+            AReportWithDate = Build.A<Report>().WithDate(AReportDate);
         }
 
         [When(@"I request the DynamicBuilder to give me a builder for an instance of type Person with LastName")]
         public void WhenIRequestTheDynamicBuilderToGiveMeABuilderForAnInstanceOfTypePersonWithLastName()
         {
-            ScenarioContext.Current.Pending();
+            APersonWithLastName = Build.A<Person>().WithLastName(APersonLastName);
         }
 
-        [Then(@"I will receive two different builders for two different instances of type Report with Title")]
-        public void ThenIWillReceiveTwoDifferentBuildersForTwoDifferentInstancesOfTypeReportWithTitle()
+        [Then(@"I will receive a builder for an instance of type Report with Title")]
+        public void ThenIWillReceiveABuilderForAnInstanceOfTypeReportWithTitle()
         {
-            AReport.Should().NotBeNull();
-            AReport.Value.Should().NotBeNull();
-            AReport.Value.Title.Should().Be(AReportTitle);
+            AReportWithTitle.Should().NotBeNull();
+            AReportWithTitle.Value.Should().NotBeNull();
+            AReportWithTitle.Value.Title.Should().Be(AReportTitle);
         }
 
-        [Then(@"I will receive two different builders for two different instances of type Person with FirstName")]
-        public void ThenIWillReceiveTwoDifferentBuildersForTwoDifferentInstancesOfTypePersonWithFirstName()
+        [Then(@"I will receive a builder for an instance of type Person with FirstName")]
+        public void ThenIWillReceiveABuilderForAnInstanceOfTypePersonWithFirstName()
         {
-            ScenarioContext.Current.Pending();
+            APersonWithFirstName.Should().NotBeNull();
+            APersonWithFirstName.Value.Should().NotBeNull();
+            APersonWithFirstName.Value.FirstName.Should().Be(APersonFirstName);
         }
 
-        [Then(@"I will receive two different builders for two different instances of type Report with Date")]
-        public void ThenIWillReceiveTwoDifferentBuildersForTwoDifferentInstancesOfTypeReportWithDate()
+        [Then(@"I will receive a builder for an instance of type Report with Date")]
+        public void ThenIWillReceiveABuilderForAnInstanceOfTypeReportWithDate()
         {
-            ScenarioContext.Current.Pending();
+            AReportWithDate.Should().NotBeNull();
+            AReportWithDate.Value.Should().NotBeNull();
+            AReportWithDate.Value.Date.Should().Be(AReportDate);
         }
 
-        [Then(@"I will receive two different builders for two different instances of type Person with LastName")]
-        public void ThenIWillReceiveTwoDifferentBuildersForTwoDifferentInstancesOfTypePersonWithLastName()
+        [Then(@"I will receive a builder for an instance of type Person with LastName")]
+        public void ThenIWillReceiveABuilderForAnInstanceOfTypePersonWithLastName()
         {
-            ScenarioContext.Current.Pending();
+            APersonWithLastName.Should().NotBeNull();
+            APersonWithLastName.Value.Should().NotBeNull();
+            APersonWithLastName.Value.LastName.Should().Be(APersonLastName);
         }
 
     }

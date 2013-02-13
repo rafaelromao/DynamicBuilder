@@ -90,8 +90,7 @@ this.ScenarioSetup(scenarioInfo);
  testRunner.When(string.Format("I request the DynamicBuilder to give me a builder for an instance of type {0} wit" +
                         "h {1}", type, something), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
- testRunner.Then(string.Format("I will receive two different builders for two different instances of type {0} wit" +
-                        "h {1}", type, something), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("I will receive a builder for an instance of type {0} with {1}", type, something), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

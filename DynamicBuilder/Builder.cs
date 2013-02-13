@@ -58,7 +58,7 @@ namespace DynamicBuilder
 
         private Exception PropertyNotFoundException(Type typeOfValue, string desiredPropertyName, Exception innerException)
         {
-            return new ArgumentException(String.Format("DynamicBuilder could not find property {0} on type {1}", typeOfValue.Name, desiredPropertyName), innerException);
+            return new ArgumentException(String.Format("DynamicBuilder could not find property {0} on type {1}", desiredPropertyName, typeOfValue.Name), innerException);
         }
 
         private IBuilder<T> GetBuilderSettingPropertyOnValue(PropertyInfo property, object propertyValue)
