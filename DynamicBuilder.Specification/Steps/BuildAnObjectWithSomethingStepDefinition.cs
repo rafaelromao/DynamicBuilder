@@ -30,12 +30,14 @@ namespace DynamicBuilder.Specification.Steps
             Build = new Builder();
         }
 
+        [Scope(Feature = "Build an object with something")]
         [When(@"I request the DynamicBuilder to give me a builder for an instance of type Report with Title")]
         public void WhenIRequestTheDynamicBuilderToGiveMeABuilderForAnInstanceOfTypeReportWithTitle()
         {
             AReportWithTitle = Build.A<Report>().WithTitle(AReportTitle);
         }
 
+        [Scope(Feature = "Build an object with something")]
         [When(@"I request the DynamicBuilder to give me a builder for an instance of type Person with FirstName")]
         public void WhenIRequestTheDynamicBuilderToGiveMeABuilderForAnInstanceOfTypePersonWithFirstName()
         {
