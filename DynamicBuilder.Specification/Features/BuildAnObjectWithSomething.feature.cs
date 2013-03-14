@@ -32,9 +32,9 @@ namespace DynamicBuilder.Specification.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Build an object with something", "In order to verify that the DynamicBuilder can build objects with something\r\nAs a" +
-                    " developer\r\nI want to receive, from an instance of DynamicBuilder, a new instanc" +
-                    "e of a given type and pass it something", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Build an object with something", "In order to verify that I can build objects dynamically with some property set\r\nA" +
+                    "s a developer\r\nI want to receive, from an instance of BuilderFactory, a builder " +
+                    "that builds an instance of a given type with the property value I set", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -85,9 +85,9 @@ namespace DynamicBuilder.Specification.Features
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
- testRunner.Given("I have an instance of the DynamicBuilder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have an instance of the BuilderFactory", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
- testRunner.When(string.Format("I request the DynamicBuilder to give me a builder for an instance of type {0} wit" +
+ testRunner.When(string.Format("I request the BuilderFactory to give me a builder for an instance of type {0} wit" +
                         "h {1}", type, something), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
  testRunner.Then(string.Format("I will receive a builder for an instance of type {0} with {1}", type, something), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

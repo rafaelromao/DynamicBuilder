@@ -24,34 +24,34 @@ namespace DynamicBuilder.Specification.Steps
         protected IBuilderFactory Factory = null;
 
         [Scope(Feature = "Build an object with something")]
-        [Given(@"I have an instance of the DynamicBuilder")]
-        public void GivenIHaveAnInstanceOfTheDynamicBuilder()
+        [Given(@"I have an instance of the BuilderFactory")]
+        public void GivenIHaveAnInstanceOfTheBuilderFactory()
         {
             Factory = new BuilderFactory();
         }
 
         [Scope(Feature = "Build an object with something")]
-        [When(@"I request the DynamicBuilder to give me a builder for an instance of type Report with Title")]
-        public void WhenIRequestTheDynamicBuilderToGiveMeABuilderForAnInstanceOfTypeReportWithTitle()
+        [When(@"I request the BuilderFactory to give me a builder for an instance of type Report with Title")]
+        public void WhenIRequestTheBuilderFactoryToGiveMeABuilderForAnInstanceOfTypeReportWithTitle()
         {
             AReportWithTitleBuilder = Factory.ABuilderFor<Report>().WithTitle(AReportTitle);
         }
 
         [Scope(Feature = "Build an object with something")]
-        [When(@"I request the DynamicBuilder to give me a builder for an instance of type Person with FirstName")]
-        public void WhenIRequestTheDynamicBuilderToGiveMeABuilderForAnInstanceOfTypePersonWithFirstName()
+        [When(@"I request the BuilderFactory to give me a builder for an instance of type Person with FirstName")]
+        public void WhenIRequestTheBuilderFactoryToGiveMeABuilderForAnInstanceOfTypePersonWithFirstName()
         {
             APersonWithFirstNameBuilder = Factory.ABuilderFor<Person>().WithFirstName(APersonFirstName);
         }
 
-        [When(@"I request the DynamicBuilder to give me a builder for an instance of type Report with Date")]
-        public void WhenIRequestTheDynamicBuilderToGiveMeABuilderForAnInstanceOfTypeReportWithDate()
+        [When(@"I request the BuilderFactory to give me a builder for an instance of type Report with Date")]
+        public void WhenIRequestTheBuilderFactoryToGiveMeABuilderForAnInstanceOfTypeReportWithDate()
         {
             AReportWithDateBuilder = Factory.ABuilderFor<Report>().WithDate(AReportDate);
         }
 
-        [When(@"I request the DynamicBuilder to give me a builder for an instance of type Person with LastName")]
-        public void WhenIRequestTheDynamicBuilderToGiveMeABuilderForAnInstanceOfTypePersonWithLastName()
+        [When(@"I request the BuilderFactory to give me a builder for an instance of type Person with LastName")]
+        public void WhenIRequestTheBuilderFactoryToGiveMeABuilderForAnInstanceOfTypePersonWithLastName()
         {
             APersonWithLastNameBuilder = Factory.ABuilderFor<Person>().WithLastName(APersonLastName);
         }

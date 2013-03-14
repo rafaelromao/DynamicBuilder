@@ -19,33 +19,33 @@ namespace DynamicBuilder.Specification.Steps
 
         protected IBuilderFactory Factory = null;
 
-        [Given(@"I have an instance of the DynamicBuilder")]
+        [Given(@"I have an instance of the BuilderFactory")]
         [Scope(Feature = "Build an object")]
-        public void GivenIHaveAnInstanceOfTheDynamicBuilder()
+        public void GivenIHaveAnInstanceOfTheBuilderFactory()
         {
             Factory = new BuilderFactory();
         }
 
-        [When(@"I request the DynamicBuilder to give me a builder for an instance of type AnObject")]
-        public void WhenIRequestTheDynamicBuilderToGiveMeABuilderForAnInstanceOfTypeAnObject()
+        [When(@"I request the BuilderFactory to give me a builder for an instance of type AnObject")]
+        public void WhenIRequestTheBuilderFactoryToGiveMeABuilderForAnInstanceOfTypeAnObject()
         {
             AnObjectBuilder = Factory.ABuilderFor<AnObject>();
         }
 
-        [When(@"I request the DynamicBuilder to give me a builder for an instance of type AThing")]
-        public void WhenIRequestTheDynamicBuilderToGiveMeABuilderForAnInstanceOfTypeAThing()
+        [When(@"I request the BuilderFactory to give me a builder for an instance of type AThing")]
+        public void WhenIRequestTheBuilderFactoryToGiveMeABuilderForAnInstanceOfTypeAThing()
         {
             AThingBuilder = Factory.ABuilderFor<AThing>();
         }
 
-        [When(@"I request the DynamicBuilder to give me a builder for another instance of type AnObject")]
-        public void WhenIRequestTheDynamicBuilderToGiveMeABuilderForAnotherInstanceOfTypeAnObject()
+        [When(@"I request the BuilderFactory to give me a builder for another instance of type AnObject")]
+        public void WhenIRequestTheBuilderFactoryToGiveMeABuilderForAnotherInstanceOfTypeAnObject()
         {
             AnotherObjectBuilder = Factory.ABuilderFor<AnObject>();
         }
 
-        [When(@"I request the DynamicBuilder to give me a builder for another instance of type AThing")]
-        public void WhenIRequestTheDynamicBuilderToGiveMeABuilderForAnotherInstanceOfTypeAThing()
+        [When(@"I request the BuilderFactory to give me a builder for another instance of type AThing")]
+        public void WhenIRequestTheBuilderFactoryToGiveMeABuilderForAnotherInstanceOfTypeAThing()
         {
             AnotherThingBuilder = Factory.ABuilderFor<AThing>();
         }

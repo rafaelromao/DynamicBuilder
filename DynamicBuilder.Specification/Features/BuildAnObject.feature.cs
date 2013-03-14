@@ -32,9 +32,9 @@ namespace DynamicBuilder.Specification.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Build an object", "In order to verify that the DynamicBuilder can build objects\r\nAs a developer\r\nI w" +
-                    "ant to receive, from an instance of DynamicBuilder, a new instance of a given ty" +
-                    "pe", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Build an object", "In order to verify that I can build objects dynamically\r\nAs a developer\r\nI want t" +
+                    "o receive, from an instance of BuilderFactory, a builder that builds an instance" +
+                    " of a given type", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -83,9 +83,9 @@ namespace DynamicBuilder.Specification.Features
 #line 7
 this.ScenarioSetup(scenarioInfo);
 #line 8
- testRunner.Given("I have an instance of the DynamicBuilder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have an instance of the BuilderFactory", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 9
- testRunner.When(string.Format("I request the DynamicBuilder to give me a builder for an instance of type {0}", type), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I request the BuilderFactory to give me a builder for an instance of type {0}", type), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
  testRunner.Then(string.Format("I will receive a builder for an instance of type {0}", type), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
@@ -109,11 +109,11 @@ this.ScenarioSetup(scenarioInfo);
 #line 18
 this.ScenarioSetup(scenarioInfo);
 #line 19
- testRunner.Given("I have an instance of the DynamicBuilder", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I have an instance of the BuilderFactory", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 20
- testRunner.When(string.Format("I request the DynamicBuilder to give me a builder for an instance of type {0}", type), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I request the BuilderFactory to give me a builder for an instance of type {0}", type), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 21
- testRunner.And(string.Format("I request the DynamicBuilder to give me a builder for another instance of type {0" +
+ testRunner.And(string.Format("I request the BuilderFactory to give me a builder for another instance of type {0" +
                         "}", type), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 22
  testRunner.Then(string.Format("I will receive two different builders for two different instances of type {0}", type), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

@@ -11,8 +11,8 @@ namespace DynamicBuilder.Specification.Steps
     [Binding]
     public class BuildAnObjectWithSomethingAndSomethingElseStepDefinition
     {
-        private IBuilder<Person> APersonBuilder = null;
-        private IBuilder<Report> AReportBuilder = null;
+        private dynamic APersonBuilder = null;
+        private dynamic AReportBuilder = null;
 
         private readonly string AReportTitle = "Montly Report";
         private readonly DateTime AReportDate = new DateTime(2012, 10, 28);
@@ -22,43 +22,43 @@ namespace DynamicBuilder.Specification.Steps
         protected IBuilderFactory Factory = null;
 
         [Scope(Feature = "Build an object with something and something else")]
-        [Given(@"I have an instance of the DynamicBuilder")]
-        public void GivenIHaveAnInstanceOfTheDynamicBuilder()
+        [Given(@"I have an instance of the BuilderFactory")]
+        public void GivenIHaveAnInstanceOfTheBuilderFactory()
         {
             Factory = new BuilderFactory();
         }
 
         [Scope(Feature = "Build an object with something and something else")]
-        [When(@"I request the DynamicBuilder to give me a builder for an instance of type Person with FirstName")]
-        public void WhenIRequestTheDynamicBuilderToGiveMeABuilderForAnInstanceOfTypePersonWithFirstName()
+        [When(@"I request the BuilderFactory to give me a builder for an instance of type Person with FirstName")]
+        public void WhenIRequestTheBuilderFactoryToGiveMeABuilderForAnInstanceOfTypePersonWithFirstName()
         {
             APersonBuilder = Factory.ABuilderFor<Person>().WithFirstName(APersonFirstName);
         }
 
         [Scope(Feature = "Build an object with something and something else")]
-        [When(@"I request the DynamicBuilder to give me a builder for an instance of type Report with Title")]
-        public void WhenIRequestTheDynamicBuilderToGiveMeABuilderForAnInstanceOfTypeReportWithTitle()
+        [When(@"I request the BuilderFactory to give me a builder for an instance of type Report with Title")]
+        public void WhenIRequestTheBuilderFactoryToGiveMeABuilderForAnInstanceOfTypeReportWithTitle()
         {
             AReportBuilder = Factory.ABuilderFor<Report>().WithTitle(AReportTitle);
         }
 
-        [When(@"I request this builder to give me another builder for an instance of type Report with Date")]
-        public void WhenIRequestThisBuilderToGiveMeAnotherBuilderForAnInstanceOfTypeReportWithDate()
+        [When(@"I request this builder to give me a builder for an instance of type Report with Date")]
+        public void WhenIRequestThisBuilderToGiveMeABuilderForAnInstanceOfTypeReportWithDate()
         {
-            //APersonBuilder = APersonBuilder.WithLastName(APersonLastName);
+            APersonBuilder = APersonBuilder.WithLastName(APersonLastName);
         }
 
-        [When(@"I request this builder to give me another builder for an instance of type Person with LastName")]
-        public void WhenIRequestThisBuilderToGiveMeAnotherBuilderForAnInstanceOfTypePersonWithLastName()
+        [When(@"I request this builder to give me a builder for an instance of type Person with LastName")]
+        public void WhenIRequestThisBuilderToGiveMeABuilderForAnInstanceOfTypePersonWithLastName()
         {
-            //AReportBuilder = AReportBuilder.WithDate(AReportDate);
+            AReportBuilder = AReportBuilder.WithDate(AReportDate);
         }
 
         [Then(@"I will receive a builder for a single instance of type Person with FirstName and LastName")]
         public void ThenIWillReceiveABuilderForASingleInstanceOfTypePersonWithFirstNameAndLastName()
         {
             APersonBuilder.Should().NotBeNull();
-            var aPerson = APersonBuilder.Value;
+            Person aPerson = APersonBuilder.Value;
             aPerson.Should().NotBeNull();
             aPerson.FirstName.Should().Be(APersonFirstName);
             aPerson.LastName.Should().Be(APersonLastName);
@@ -68,7 +68,7 @@ namespace DynamicBuilder.Specification.Steps
         public void ThenIWillReceiveABuilderForASingleInstanceOfTypeReportWithTitleAndDate()
         {
             AReportBuilder.Should().NotBeNull();
-            var aReport = AReportBuilder.Value;
+            Report aReport = AReportBuilder.Value;
             aReport.Should().NotBeNull();
             aReport.Title.Should().Be(AReportTitle);
             aReport.Date.Should().Be(AReportDate);
