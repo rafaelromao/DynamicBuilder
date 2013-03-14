@@ -11,65 +11,67 @@ namespace DynamicBuilder.Specification.Steps
     [Binding]
     public class BuildAnObjectWithSomethingAndSomethingElseStepDefinition
     {
-        private dynamic APerson = null;
-        private dynamic AReport = null;
+        private IBuilder<Person> APersonBuilder = null;
+        private IBuilder<Report> AReportBuilder = null;
 
         private readonly string AReportTitle = "Montly Report";
         private readonly DateTime AReportDate = new DateTime(2012, 10, 28);
         private readonly string APersonFirstName = "José";
         private readonly string APersonLastName = "da Silva";
 
-        protected IBuilder Build = null;
+        protected IBuilderFactory Factory = null;
 
         [Scope(Feature = "Build an object with something and something else")]
         [Given(@"I have an instance of the DynamicBuilder")]
         public void GivenIHaveAnInstanceOfTheDynamicBuilder()
         {
-            Build = new Builder();
+            Factory = new BuilderFactory();
         }
 
         [Scope(Feature = "Build an object with something and something else")]
         [When(@"I request the DynamicBuilder to give me a builder for an instance of type Person with FirstName")]
         public void WhenIRequestTheDynamicBuilderToGiveMeABuilderForAnInstanceOfTypePersonWithFirstName()
         {
-            APerson = Build.A<Person>().WithFirstName(APersonFirstName);
+            APersonBuilder = Factory.ABuilderFor<Person>().WithFirstName(APersonFirstName);
         }
 
         [Scope(Feature = "Build an object with something and something else")]
         [When(@"I request the DynamicBuilder to give me a builder for an instance of type Report with Title")]
         public void WhenIRequestTheDynamicBuilderToGiveMeABuilderForAnInstanceOfTypeReportWithTitle()
         {
-            AReport = Build.A<Report>().WithTitle(AReportTitle);
+            AReportBuilder = Factory.ABuilderFor<Report>().WithTitle(AReportTitle);
         }
 
         [When(@"I request this builder to give me another builder for an instance of type Report with Date")]
         public void WhenIRequestThisBuilderToGiveMeAnotherBuilderForAnInstanceOfTypeReportWithDate()
         {
-            APerson = APerson.WithLastName(APersonLastName);
+            //APersonBuilder = APersonBuilder.WithLastName(APersonLastName);
         }
 
         [When(@"I request this builder to give me another builder for an instance of type Person with LastName")]
         public void WhenIRequestThisBuilderToGiveMeAnotherBuilderForAnInstanceOfTypePersonWithLastName()
         {
-            AReport = AReport.WithDate(AReportDate);
+            //AReportBuilder = AReportBuilder.WithDate(AReportDate);
         }
 
         [Then(@"I will receive a builder for a single instance of type Person with FirstName and LastName")]
         public void ThenIWillReceiveABuilderForASingleInstanceOfTypePersonWithFirstNameAndLastName()
         {
-            APerson.Should().NotBeNull();
-            APerson.Value.Should().NotBeNull();
-            APerson.Value.FirstName.Should().Be(APersonFirstName);
-            APerson.Value.LastName.Should().Be(APersonLastName);
+            APersonBuilder.Should().NotBeNull();
+            var aPerson = APersonBuilder.Value;
+            aPerson.Should().NotBeNull();
+            aPerson.FirstName.Should().Be(APersonFirstName);
+            aPerson.LastName.Should().Be(APersonLastName);
         }
 
         [Then(@"I will receive a builder for a single instance of type Report with Title and Date")]
         public void ThenIWillReceiveABuilderForASingleInstanceOfTypeReportWithTitleAndDate()
         {
-            AReport.Should().NotBeNull();
-            AReport.Value.Should().NotBeNull();
-            AReport.Value.Title.Should().Be(AReportTitle);
-            AReport.Value.Date.Should().Be(AReportDate);
+            AReportBuilder.Should().NotBeNull();
+            var aReport = AReportBuilder.Value;
+            aReport.Should().NotBeNull();
+            aReport.Title.Should().Be(AReportTitle);
+            aReport.Date.Should().Be(AReportDate);
         }
     }
 }

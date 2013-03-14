@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace DynamicBuilder
 {
-    public interface IBuilder<T> where T : new()
+    public interface IBuilderFactory
     {
-        T Value { get; }
+        dynamic ABuilderFor<T>() where T : new();
     }
 }
