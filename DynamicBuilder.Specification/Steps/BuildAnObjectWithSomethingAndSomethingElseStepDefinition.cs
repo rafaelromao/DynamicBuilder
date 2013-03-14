@@ -45,13 +45,13 @@ namespace DynamicBuilder.Specification.Steps
         [When(@"I request this builder to give me a builder for an instance of type Report with Date")]
         public void WhenIRequestThisBuilderToGiveMeABuilderForAnInstanceOfTypeReportWithDate()
         {
-            APersonBuilder = APersonBuilder.WithLastName(APersonLastName);
+            AReportBuilder = AReportBuilder.WithDate(AReportDate);
         }
 
         [When(@"I request this builder to give me a builder for an instance of type Person with LastName")]
         public void WhenIRequestThisBuilderToGiveMeABuilderForAnInstanceOfTypePersonWithLastName()
         {
-            AReportBuilder = AReportBuilder.WithDate(AReportDate);
+            APersonBuilder = APersonBuilder.WithLastName(APersonLastName);
         }
 
         [Then(@"I will receive a builder for a single instance of type Person with FirstName and LastName")]

@@ -25,28 +25,33 @@ namespace DynamicBuilder
         public override bool TryInvokeMember(InvokeMemberBinder binder, object[] args, out object result)
         {
             var typeOfValue = typeof(T);
-            var desiredPropertyName = GetDesiredPropertyNameFrom(binder.Name);
-            var desiredPropertyOnValue = typeOfValue.GetProperty(desiredPropertyName);
-
-            if (desiredPropertyOnValue != null)
+            try
             {
-                try
+                var desiredPropertyName = GetDesiredPropertyNameFrom(binder.Name);
+                if (desiredPropertyName == null)
                 {
-                    var propertyValue = args[0];
-                    result = GetBuilderSettingPropertyOnValue(desiredPropertyOnValue, propertyValue);
+                    result = this;
                     return true;
                 }
-                catch (Exception innerException)
+                var desiredPropertyOnValue = typeOfValue.GetProperty(desiredPropertyName);
+                if (desiredPropertyOnValue == null)
                 {
-                    throw PropertyNotFoundException(typeOfValue, desiredPropertyName, innerException);
+                    result = this;
+                    return true;
                 }
+                var propertyValue = args[0];
+                result = GetBuilderSettingPropertyOnValue(desiredPropertyOnValue, propertyValue);
+                return true;
             }
-            throw PropertyNotFoundException(typeOfValue, desiredPropertyName, null);
+            catch (Exception innerException)
+            {
+                throw BuildException(typeOfValue, binder.Name, innerException);
+            }
         }
 
-        private Exception PropertyNotFoundException(Type typeOfValue, string desiredPropertyName, Exception innerException)
+        private Exception BuildException(Type typeOfValue, string binderName, Exception innerException)
         {
-            return new ArgumentException(String.Format("DynamicBuilder could not find property {0} on type {1}", desiredPropertyName, typeOfValue.Name), innerException);
+            return new ArgumentException(String.Format("DynamicBuilder could not bind to any property on type {0} using binder {1}", typeOfValue.Name, binderName), innerException);
         }
 
         private IBuilder<T> GetBuilderSettingPropertyOnValue(PropertyInfo property, object propertyValue)

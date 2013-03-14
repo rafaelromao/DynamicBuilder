@@ -1,91 +1,63 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <!--This file represents the results of running a test suite-->
-<test-results name="C:\Users\Rafael\documents\visual studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\DynamicBuilder.Specification.csproj" total="10" errors="2" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2013-03-14" time="07:53:45">
-  <environment nunit-version="2.6.2.12296" clr-version="2.0.50727.6400" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Users\Rafael\documents\visual studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification" machine-name="WIN8RMR" user="Rafael" user-domain="WIN8RMR" />
+<test-results name="C:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\DynamicBuilder.Specification.nunit" total="10" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2013-03-14" time="10:11:56">
+  <environment nunit-version="2.6.2.12296" clr-version="2.0.50727.6400" os-version="Microsoft Windows NT 6.2.9200.0" platform="Win32NT" cwd="C:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\packages\NUnit.2.6.2" machine-name="WIN8RMR" user="Rafael" user-domain="WIN8RMR" />
   <culture-info current-culture="pt-BR" current-uiculture="pt-BR" />
-  <test-suite type="Project" name="C:\Users\Rafael\documents\visual studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\DynamicBuilder.Specification.csproj" executed="True" result="Failure" success="False" time="2.126" asserts="0">
+  <test-suite type="Project" name="C:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\DynamicBuilder.Specification.nunit" executed="True" result="Success" success="True" time="2.266" asserts="0">
     <results>
-      <test-suite type="Assembly" name="C:\Users\Rafael\documents\visual studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\bin\Debug\DynamicBuilder.Specification.dll" executed="True" result="Failure" success="False" time="2.109" asserts="0">
+      <test-suite type="Assembly" name="C:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\bin\Debug\DynamicBuilder.Specification.dll" executed="True" result="Success" success="True" time="2.250" asserts="0">
         <results>
-          <test-suite type="Namespace" name="DynamicBuilder" executed="True" result="Failure" success="False" time="2.109" asserts="0">
+          <test-suite type="Namespace" name="DynamicBuilder" executed="True" result="Success" success="True" time="2.250" asserts="0">
             <results>
-              <test-suite type="Namespace" name="Specification" executed="True" result="Failure" success="False" time="2.109" asserts="0">
+              <test-suite type="Namespace" name="Specification" executed="True" result="Success" success="True" time="2.250" asserts="0">
                 <results>
-                  <test-suite type="Namespace" name="Features" executed="True" result="Failure" success="False" time="2.109" asserts="0">
+                  <test-suite type="Namespace" name="Features" executed="True" result="Success" success="True" time="2.250" asserts="0">
                     <results>
-                      <test-suite type="TestFixture" name="BuildAnObjectFeature" description="Build an object" executed="True" result="Success" success="True" time="1.843" asserts="0">
+                      <test-suite type="TestFixture" name="BuildAnObjectFeature" description="Build an object" executed="True" result="Success" success="True" time="1.875" asserts="0">
                         <results>
-                          <test-suite type="ParameterizedTest" name="BuildAnObject" description="Build an object" executed="True" result="Success" success="True" time="1.376" asserts="0">
+                          <test-suite type="ParameterizedTest" name="BuildAnObject" description="Build an object" executed="True" result="Success" success="True" time="1.406" asserts="0">
                             <categories>
                               <category name="building" />
                             </categories>
                             <results>
-                              <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectFeature.BuildAnObject(&quot;AnObject&quot;,null)" executed="True" result="Success" success="True" time="1.344" asserts="0" />
+                              <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectFeature.BuildAnObject(&quot;AnObject&quot;,null)" executed="True" result="Success" success="True" time="1.391" asserts="0" />
                               <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectFeature.BuildAnObject(&quot;AThing&quot;,null)" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                             </results>
                           </test-suite>
-                          <test-suite type="ParameterizedTest" name="BuildTwoObjects" description="Build two objects" executed="True" result="Success" success="True" time="0.015" asserts="0">
+                          <test-suite type="ParameterizedTest" name="BuildTwoObjects" description="Build two objects" executed="True" result="Success" success="True" time="0.016" asserts="0">
                             <categories>
                               <category name="building" />
                             </categories>
                             <results>
-                              <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectFeature.BuildTwoObjects(&quot;AThing&quot;,null)" executed="True" result="Success" success="True" time="0.015" asserts="0" />
+                              <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectFeature.BuildTwoObjects(&quot;AThing&quot;,null)" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                               <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectFeature.BuildTwoObjects(&quot;AnObject&quot;,null)" executed="True" result="Success" success="True" time="0.000" asserts="0" />
                             </results>
                           </test-suite>
                         </results>
                       </test-suite>
-                      <test-suite type="TestFixture" name="BuildAnObjectWithSomethingAndSomethingElseFeature" description="Build an object with something and something else" executed="True" result="Failure" success="False" time="0.204" asserts="0">
+                      <test-suite type="TestFixture" name="BuildAnObjectWithSomethingAndSomethingElseFeature" description="Build an object with something and something else" executed="True" result="Success" success="True" time="0.297" asserts="0">
                         <results>
-                          <test-suite type="ParameterizedTest" name="BuildAnObjectWithSomethingAndSomethingElse" description="Build an object with something and something else" executed="True" result="Failure" success="False" time="0.204" asserts="0">
+                          <test-suite type="ParameterizedTest" name="BuildAnObjectWithSomethingAndSomethingElse" description="Build an object with something and something else" executed="True" result="Success" success="True" time="0.297" asserts="0">
                             <categories>
                               <category name="building" />
                             </categories>
                             <results>
-                              <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectWithSomethingAndSomethingElseFeature.BuildAnObjectWithSomethingAndSomethingElse(&quot;Person&quot;,&quot;FirstName&quot;,&quot;LastName&quot;,null)" executed="True" result="Error" success="False" time="0.173" asserts="0">
-                                <failure>
-                                  <message><![CDATA[Microsoft.CSharp.RuntimeBinder.RuntimeBinderException : Não é possível fazer associação em tempo de execução em uma referência nula]]></message>
-                                  <stack-trace><![CDATA[em CallSite.Target(Closure , CallSite , Object , DateTime )
-em System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
-em DynamicBuilder.Specification.Steps.BuildAnObjectWithSomethingAndSomethingElseStepDefinition.WhenIRequestThisBuilderToGiveMeABuilderForAnInstanceOfTypePersonWithLastName() na c:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\Steps\BuildAnObjectWithSomethingAndSomethingElseStepDefinition.cs:linha 54
-em TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
-em TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
-em TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
-em TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
-em DynamicBuilder.Specification.Features.BuildAnObjectWithSomethingAndSomethingElseFeature.ScenarioCleanup() na c:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\Features\BuildAnObjectWithSomethingAndSomethingElse.feature.cs:linha 0
-em DynamicBuilder.Specification.Features.BuildAnObjectWithSomethingAndSomethingElseFeature.BuildAnObjectWithSomethingAndSomethingElse(String type, String something, String somethingElse, String[] exampleTags) na c:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\Features\BuildAnObjectWithSomethingAndSomethingElse.feature:linha 11
-]]></stack-trace>
-                                </failure>
-                              </test-case>
-                              <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectWithSomethingAndSomethingElseFeature.BuildAnObjectWithSomethingAndSomethingElse(&quot;Report&quot;,&quot;Title&quot;,&quot;Date&quot;,null)" executed="True" result="Error" success="False" time="0.016" asserts="0">
-                                <failure>
-                                  <message><![CDATA[Microsoft.CSharp.RuntimeBinder.RuntimeBinderException : Não é possível fazer associação em tempo de execução em uma referência nula]]></message>
-                                  <stack-trace><![CDATA[em CallSite.Target(Closure , CallSite , Object , String )
-em System.Dynamic.UpdateDelegates.UpdateAndExecute2[T0,T1,TRet](CallSite site, T0 arg0, T1 arg1)
-em DynamicBuilder.Specification.Steps.BuildAnObjectWithSomethingAndSomethingElseStepDefinition.WhenIRequestThisBuilderToGiveMeABuilderForAnInstanceOfTypeReportWithDate() na c:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\Steps\BuildAnObjectWithSomethingAndSomethingElseStepDefinition.cs:linha 48
-em TechTalk.SpecFlow.Bindings.BindingInvoker.InvokeBinding(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, TimeSpan& duration)
-em TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStepMatch(BindingMatch match, Object[] arguments)
-em TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.ExecuteStep(StepInstance stepInstance)
-em TechTalk.SpecFlow.Infrastructure.TestExecutionEngine.OnAfterLastStep()
-em DynamicBuilder.Specification.Features.BuildAnObjectWithSomethingAndSomethingElseFeature.ScenarioCleanup() na c:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\Features\BuildAnObjectWithSomethingAndSomethingElse.feature.cs:linha 0
-em DynamicBuilder.Specification.Features.BuildAnObjectWithSomethingAndSomethingElseFeature.BuildAnObjectWithSomethingAndSomethingElse(String type, String something, String somethingElse, String[] exampleTags) na c:\Users\Rafael\Documents\Visual Studio 2012\Projects\DynamicBuilder\DynamicBuilder.Specification\Features\BuildAnObjectWithSomethingAndSomethingElse.feature:linha 11
-]]></stack-trace>
-                                </failure>
-                              </test-case>
+                              <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectWithSomethingAndSomethingElseFeature.BuildAnObjectWithSomethingAndSomethingElse(&quot;Person&quot;,&quot;FirstName&quot;,&quot;LastName&quot;,null)" executed="True" result="Success" success="True" time="0.266" asserts="0" />
+                              <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectWithSomethingAndSomethingElseFeature.BuildAnObjectWithSomethingAndSomethingElse(&quot;Report&quot;,&quot;Title&quot;,&quot;Date&quot;,null)" executed="True" result="Success" success="True" time="0.031" asserts="0" />
                             </results>
                           </test-suite>
                         </results>
                       </test-suite>
-                      <test-suite type="TestFixture" name="BuildAnObjectWithSomethingFeature" description="Build an object with something" executed="True" result="Success" success="True" time="0.048" asserts="0">
+                      <test-suite type="TestFixture" name="BuildAnObjectWithSomethingFeature" description="Build an object with something" executed="True" result="Success" success="True" time="0.062" asserts="0">
                         <results>
-                          <test-suite type="ParameterizedTest" name="BuildAnObjectWithSomething" description="Build an object with something" executed="True" result="Success" success="True" time="0.048" asserts="0">
+                          <test-suite type="ParameterizedTest" name="BuildAnObjectWithSomething" description="Build an object with something" executed="True" result="Success" success="True" time="0.062" asserts="0">
                             <categories>
                               <category name="building" />
                             </categories>
                             <results>
-                              <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectWithSomethingFeature.BuildAnObjectWithSomething(&quot;Report&quot;,&quot;Title&quot;,null)" executed="True" result="Success" success="True" time="0.016" asserts="0" />
+                              <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectWithSomethingFeature.BuildAnObjectWithSomething(&quot;Report&quot;,&quot;Title&quot;,null)" executed="True" result="Success" success="True" time="0.015" asserts="0" />
                               <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectWithSomethingFeature.BuildAnObjectWithSomething(&quot;Report&quot;,&quot;Date&quot;,null)" executed="True" result="Success" success="True" time="0.016" asserts="0" />
-                              <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectWithSomethingFeature.BuildAnObjectWithSomething(&quot;Person&quot;,&quot;FirstName&quot;,null)" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                              <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectWithSomethingFeature.BuildAnObjectWithSomething(&quot;Person&quot;,&quot;FirstName&quot;,null)" executed="True" result="Success" success="True" time="0.016" asserts="0" />
                               <test-case name="DynamicBuilder.Specification.Features.BuildAnObjectWithSomethingFeature.BuildAnObjectWithSomething(&quot;Person&quot;,&quot;LastName&quot;,null)" executed="True" result="Success" success="True" time="0.016" asserts="0" />
                             </results>
                           </test-suite>
