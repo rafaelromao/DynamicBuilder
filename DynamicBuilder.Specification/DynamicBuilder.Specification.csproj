@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Features\BuildAnObjectWithSomethingAndSomethingElse.feature.cs" />
+    <Compile Include="Features\BuildTwoSlightlyDifferentObjectsUsingTheSameBuilder.feature.cs" />
     <Compile Include="Model\AnObject.cs" />
     <Compile Include="Model\AThing.cs" />
     <Compile Include="Model\Report.cs" />
@@ -61,12 +62,14 @@
     <Compile Include="Steps\BuildAnObjectStepDefinition.cs" />
     <Compile Include="Steps\BuildAnObjectWithSomethingStepDefinition.cs" />
     <Compile Include="Steps\BuildAnObjectWithSomethingAndSomethingElseStepDefinition.cs" />
+    <Compile Include="Steps\BuildTwoSlightlyDifferentObjectsUsingTheSameBuilderStepDefinition.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Features\BuildAnObject.feature" />
     <None Include="Features\BuildAnObjectWithSomething.feature" />
     <None Include="Features\BuildAnObjectWithSomethingAndSomethingElse.feature" />
+    <None Include="Features\BuildTwoSlightlyDifferentObjectsUsingTheSameBuilder.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
