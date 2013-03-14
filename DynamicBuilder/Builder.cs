@@ -10,17 +10,30 @@ namespace DynamicBuilder
 {
     public class Builder<T> : DynamicObject, IBuilder<T> where T : new()
     {
-        protected Builder(T value)
+        protected Builder(List<IBuildAction> buildActions)
         {
-            Value = value;
+            BuildActions = buildActions;
         }
 
         public Builder()
-            : this(new T())
+            : this(new List<IBuildAction>())
         {
         }
 
-        public T Value { get; private set; }
+        public T Value 
+        {
+            get
+            {
+                var value = new T();
+                foreach (var buildAction in BuildActions)
+                {
+                    buildAction.ExecuteOn(value);
+                }
+                return value;
+            }
+        }
+
+        private List<IBuildAction> BuildActions = null;
 
         public override bool TryInvokeMember(InvokeMemberBinder binder, object[] args, out object result)
         {
@@ -56,8 +69,9 @@ namespace DynamicBuilder
 
         private IBuilder<T> GetBuilderSettingPropertyOnValue(PropertyInfo property, object propertyValue)
         {
-            property.SetValue(this.Value, propertyValue);
-            var builder = new Builder<T>(this.Value);
+            var buildActions = new List<IBuildAction>(BuildActions);
+            buildActions.Add(new PropertySetterAction(property, propertyValue));
+            var builder = new Builder<T>(buildActions);
             return builder;
         }
 

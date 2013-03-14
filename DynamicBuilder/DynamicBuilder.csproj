@@ -41,6 +41,8 @@
   <ItemGroup>
     <Compile Include="Builder.cs" />
     <Compile Include="BuilderFactory.cs" />
+    <Compile Include="PropertySetterAction.cs" />
+    <Compile Include="IBuildAction.cs" />
     <Compile Include="IBuilderFactory.cs" />
     <Compile Include="IBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
